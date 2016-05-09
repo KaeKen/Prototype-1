@@ -101,17 +101,24 @@ main {
   position: relative;
 }
 
+.section-wrap {
+  text-align: center;
+}
+
 .section-post {
-  border-left: 3px solid #94dbb3;
-  background: #f0f0f0;
-  padding: 6px 18px;
+  border-left: 3px solid #6dce98;
+  padding: 2px 14px;
   color: #3cb371;
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 300;
   margin: 2.75rem 2rem;
   width: auto;
   display: inline-block;
   position: relative;
+}
+.section-post span {
+  font-size: 1.5rem;
+  color: #afafaf;
 }
 
 .card-content-wrapper {
@@ -123,10 +130,10 @@ main {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-flex-flow: row nowrap;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
@@ -138,11 +145,50 @@ main {
   margin: 0 0.75rem;
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
+  box-shadow: 1px 1px 6px 0 #ececec;
   position: relative;
   height: inherit;
+  z-index: 99;
+  background: white;
+}
+.card-content-wrapper .card-item .card-info {
+  padding: 3% 1%;
+  margin: 0 4%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid whitesmoke;
+}
+.card-content-wrapper .card-item .card-info > div {
+  font-size: 11px;
+  font-weight: 500;
+  color: #d7d7d7;
+}
+.card-content-wrapper .card-item .title-head {
+  padding: 4px 16px;
+  box-sizing: border-box;
+  margin: 18px 3%;
+  text-align: center;
+}
+.card-content-wrapper .card-item .title-head .title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #646464;
 }
 .card-content-wrapper .card-item .news-img {
-  width: 100%;
+  margin-left: 3%;
+  width: 94%;
   height: 28rem;
   background: #f0f0f0;
   box-sizing: border-box;
@@ -155,25 +201,7 @@ main {
   position: relative;
   text-align: right;
 }
-.card-content-wrapper .card-item .news-foot .title-head {
-  padding: 4px 16px;
-  border-left: 1px solid #51a9ff;
-  box-sizing: border-box;
-}
-.card-content-wrapper .card-item .news-foot .title-head .category {
-  text-align: left;
-  font-size: 0.65rem;
-  font-weight: 500;
-  color: #51a9ff;
-  margin-bottom: 4px;
-}
-.card-content-wrapper .card-item .news-foot .title-head .title {
-  text-align: left;
-  font-size: 1.4rem;
-  font-weight: 300;
-  color: #646464;
-}
-.card-content-wrapper .card-item .news-foot .news-info {
+.card-content-wrapper .card-item .news-foot .news-publish-info {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,18 +210,19 @@ main {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 16px;
-  padding: 10px 0;
-  box-sizing: border-box;
-  border-bottom: 1px solid #e6e6e6;
+  margin: 0 32px;
+  box-sizing: padding-box;
 }
-.card-content-wrapper .card-item .news-foot .news-info .info-item {
+.card-content-wrapper .card-item .news-foot .news-publish-info .info-item {
   font-size: 0.8rem;
   color: #bebebe;
+  font-weight: 300;
+}
+.card-content-wrapper .card-item .news-foot .news-publish-info .info-item i {
+  font-size: 0.8rem;
 }
 .card-content-wrapper .card-item .news-foot .desc-container {
   width: 100%;
-  margin-top: 6px;
   padding: 6px 24px;
   box-sizing: border-box;
   text-align: justify;
