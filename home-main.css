@@ -11,11 +11,11 @@ body {
 
 .global-nav {
   width: 100%;
-  height: 3rem;
+  height: 3.75rem;
   position: relative;
   box-sizing: border-box;
   border-bottom: 1px solid #ebebeb;
-  background: #333333;
+  background: #48CFAD;
   z-index: 9;
 }
 .global-nav .gn-content-wrap {
@@ -32,8 +32,8 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
   padding: 0 2rem;
+  height: 100%;
   position: relative;
 }
 .global-nav .gn-content-wrap .gn-left-head {
@@ -47,27 +47,44 @@ body {
           align-items: center;
 }
 .global-nav .gn-content-wrap .logo-wrap {
-  padding-right: 0.75rem;
   box-sizing: border-box;
-  border-right: 1px solid #36a065;
   display: inline-block;
-  margin-right: 2rem;
+  margin-right: 3.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.global-nav .gn-content-wrap .logo-wrap > div {
+  display: inline-block;
 }
 .global-nav .gn-content-wrap .logo-wrap .logo-text {
-  font-weight: 600;
+  border-right: 1px solid #99e4d1;
+  padding-right: 0.75rem;
+  font-weight: 500;
   color: white;
 }
 .global-nav .gn-content-wrap .cat-drpdwn {
-  display: inline-block;
   color: white;
-  font-weight: 500;
+  border: 1px solid #91e2ce;
+  background: #60d5b8;
+  box-sizing: border-box;
+  padding: 6px 18px;
+  font-weight: 300;
   font-size: 0.9rem;
+  margin-right: 2rem;
   cursor: pointer;
   -webkit-transition: 275ms;
           transition: 275ms;
+  position: relative;
 }
 .global-nav .gn-content-wrap .cat-drpdwn:hover {
-  color: #5ac88b;
+  background: none;
+  color: #a1e6d5;
 }
 .global-nav .gn-content-wrap .information {
   display: -webkit-box;
@@ -93,7 +110,7 @@ body {
   margin-left: 0rem;
 }
 .global-nav .gn-content-wrap .information > div:hover {
-  color: #c8c8c8;
+  color: #37BC9B;
 }
 
 main {
@@ -106,19 +123,20 @@ main {
 }
 
 .section-post {
-  border-left: 3px solid #6dce98;
-  padding: 2px 14px;
-  color: #3cb371;
+  box-sizing: border-box;
+  padding: 7px 21px;
+  color: #afafaf;
   font-size: 1.5rem;
   font-weight: 300;
-  margin: 2.75rem 2rem;
+  margin: 3rem 0;
   width: auto;
   display: inline-block;
   position: relative;
 }
 .section-post span {
   font-size: 1.5rem;
-  color: #afafaf;
+  color: #87dcc7;
+  border-bottom: 1px dashed #48CFAD;
 }
 
 .card-content-wrapper {
@@ -143,17 +161,19 @@ main {
 .card-content-wrapper .card-item {
   width: 26rem;
   margin: 0 0.75rem;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #ebebeb;
   box-sizing: border-box;
-  box-shadow: 1px 1px 6px 0 #ececec;
+  box-shadow: 1px 1px 8px 1px #eeeeee;
   position: relative;
   height: inherit;
   z-index: 99;
   background: white;
+  border-radius: 6px;
+  overflow: hidden;
 }
 .card-content-wrapper .card-item .card-info {
-  padding: 3% 1%;
-  margin: 0 4%;
+  padding: 2.5% 1.5%;
+  margin: 0 3%;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -170,25 +190,30 @@ main {
   box-sizing: border-box;
   border-bottom: 1px solid whitesmoke;
 }
-.card-content-wrapper .card-item .card-info > div {
+.card-content-wrapper .card-item .card-info .category {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #c4c4c4;
+}
+.card-content-wrapper .card-item .card-info .date {
   font-size: 11px;
   font-weight: 500;
-  color: #d7d7d7;
+  color: #a0a0a0;
 }
 .card-content-wrapper .card-item .title-head {
   padding: 4px 16px;
   box-sizing: border-box;
   margin: 18px 3%;
-  text-align: center;
+  text-align: left;
 }
 .card-content-wrapper .card-item .title-head .title {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 300;
   color: #646464;
 }
 .card-content-wrapper .card-item .news-img {
-  margin-left: 3%;
-  width: 94%;
+  margin-left: 2%;
+  width: 96%;
   height: 28rem;
   background: #f0f0f0;
   box-sizing: border-box;

@@ -1,5 +1,6 @@
-$def-color: #4fc483
-$text-color: #3cb371
+$def-color: #2ecc71
+$text-color: #37BC9B
+$global-nav: #48CFAD
 
 // =calc($property, $expression)
 // 	#{$property}: -moz-calc(#{$expression})
@@ -16,41 +17,51 @@ body
 	background: rgb(245, 245, 245)
 .global-nav
 	width: 100%
-	height: 3rem
+	height: 3.75rem
 	position: relative
 	box-sizing: border-box
 	border-bottom: 1px solid rgb(235, 235, 235)
-	background: rgb(51, 51, 51)
+	background: $global-nav
 	z-index: 9
 	.gn-content-wrap
 		margin: auto
 		display: flex
 		justify-content: space-between
 		align-items: center
-		height: 100%
 		padding: 0 2rem
+		height: 100%
 		position: relative
 		.gn-left-head
 			display: flex
 			align-items: center
 		.logo-wrap
-			padding-right: .75rem
 			box-sizing: border-box
-			border-right: 1px solid darken($text-color, 5%)
 			display: inline-block
-			margin-right: 2rem
+			margin-right: 3.5rem
+			display: flex
+			align-items: center
+			> div
+				display: inline-block
 			.logo-text
-				font-weight: 600
+				border-right: 1px solid lighten($global-nav, 20%)
+				padding-right: .75rem
+				font-weight: 500
 				color: white
 		.cat-drpdwn
-			display: inline-block
 			color: white
-			font-weight: 500
+			border: 1px solid lighten($global-nav, 18%)
+			background: lighten($global-nav, 6%)
+			box-sizing: border-box
+			padding: 6px 18px
+			font-weight: 300
 			font-size: .9rem
+			margin-right: 2rem
 			cursor: pointer
 			transition: 275ms
+			position: relative
 			&:hover
-				color: lighten($text-color, 10%)
+				background: none
+				color: lighten($global-nav, 22%)
 		.information
 			display: flex
 			align-items: center
@@ -65,25 +76,27 @@ body
 				&:first-child
 					margin-left: 0rem
 				&:hover
-					color: rgb(200, 200, 200)
+					color: $text-color
 main
 	width: 100%
 	position: relative
 .section-wrap
 	text-align: center
 .section-post
-	border-left: 3px solid lighten($text-color, 15%)
-	padding: 2px 14px
-	color: $text-color
+	// border: 2px solid lighten($text-color, 15%)
+	box-sizing: border-box
+	padding: 7px 21px
+	color: rgb(175, 175, 175)
 	font-size: 1.5rem
 	font-weight: 300
-	margin: 2.75rem 2rem
+	margin: 3rem 0
 	width: auto
 	display: inline-block
 	position: relative
 	span
 		font-size: 1.5rem
-		color: rgb(175, 175, 175)
+		color: lighten($text-color, 22%)
+		border-bottom: 1px dashed $global-nav
 .card-content-wrapper
 	display: flex
 	justify-content: center
@@ -94,39 +107,45 @@ main
 	.card-item
 		width: 26rem
 		margin: 0 .75rem
-		border: 1px solid rgb(230, 230, 230)
+		border: 1px solid rgb(235, 235, 235)
 		box-sizing: border-box
-		box-shadow: 1px 1px 6px 0 rgb(236, 236, 236)
+		box-shadow: 1px 1px 8px 1px rgb(238, 238, 238)
 		position: relative
 		height: inherit
 		z-index: 99
 		background: white
+		border-radius: 6px
+		overflow: hidden
 		.card-info
-			padding: 3% 1%
-			margin: 0 4%
+			padding: 2.5% 1.5%
+			margin: 0 3%
 			position: relative
 			display: flex
 			justify-content: space-between
 			align-items: center
 			box-sizing: border-box
 			border-bottom: 1px solid rgb(245, 245, 245)
-			> div
+			.category
+				font-size: .65rem
+				font-weight: 500
+				color: rgb(196, 196, 196)
+			.date
 				font-size: 11px
 				font-weight: 500
-				color: rgb(215, 215, 215)
+				color: rgb(160, 160, 160)
 		.title-head
 			padding: 4px 16px
 			// border-left: 1px solid lighten(dodgerblue, 10%)
 			box-sizing: border-box
 			margin: 18px 3%
-			text-align: center
+			text-align: left
 			.title
-				font-size: 1.4rem
-				font-weight: 500
+				font-size: 1.6rem
+				font-weight: 300
 				color: rgb(100, 100, 100)
 		.news-img
-			margin-left: 3%
-			width: 94%
+			margin-left: 2%
+			width: 96%
 			height: 28rem
 			background: rgb(240, 240, 240)
 			box-sizing: border-box
