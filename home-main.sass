@@ -1,13 +1,16 @@
+@import url(http://db.onlinewebfonts.com/c/906d7add5c501d838f30bd793fba792d?family=Bethel)
+@font-face
+	font-family: "Bethel"
+	src: url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.eot")
+	src: url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.eot?#iefix") format("embedded-opentype"),url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.woff2") format("woff2"),url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.woff") format("woff"),url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.ttf") format("truetype"),url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.svg#Bethel") format("svg")
 $def-color: #2ecc71
-$text-color: #37BC9B
-$global-nav: #48CFAD
+$text-color: #2ABA66
+$global-nav: #3C3B3D
 
 // =calc($property, $expression)
 // 	#{$property}: -moz-calc(#{$expression})
 // 	#{$property}: -webkit-calc(#{$expression})
 // 	#{$property}: unquote("calc(#{$expression})")
-
-
 *
 	font-family: 'Roboto', sans-serif
 	font-size: 16px
@@ -17,7 +20,7 @@ body
 	background: rgb(245, 245, 245)
 .global-nav
 	width: 100%
-	height: 3.75rem
+	height: 3.5rem
 	position: relative
 	box-sizing: border-box
 	border-bottom: 1px solid rgb(235, 235, 235)
@@ -28,7 +31,7 @@ body
 		display: flex
 		justify-content: space-between
 		align-items: center
-		padding: 0 2rem
+		padding: 0 3rem
 		height: 100%
 		position: relative
 		.gn-left-head
@@ -37,38 +40,38 @@ body
 		.logo-wrap
 			box-sizing: border-box
 			display: inline-block
-			margin-right: 3.5rem
+			margin-right: 1rem
 			display: flex
 			align-items: center
 			> div
 				display: inline-block
 			.logo-text
-				border-right: 1px solid lighten($global-nav, 20%)
-				padding-right: .75rem
-				font-weight: 500
-				color: white
+				// padding-right: .75rem
+				// border-right: 1px solid lighten($def-color, 35%)
+				font-size: 1.9rem
+				font-weight: 300
+				font-family: 'Bethel'
+				color: lighten($def-color, 10%)
 		.cat-drpdwn
 			color: white
-			border: 1px solid lighten($global-nav, 18%)
-			background: lighten($global-nav, 6%)
-			box-sizing: border-box
-			padding: 6px 18px
-			font-weight: 300
+			margin-left: 1rem
+			// box-sizing: border-box
+			// border-radius: 6px
+			font-weight: 500
 			font-size: .9rem
-			margin-right: 2rem
 			cursor: pointer
 			transition: 275ms
 			position: relative
 			&:hover
 				background: none
-				color: lighten($global-nav, 22%)
+				color: lighten($global-nav, 35%)
 		.information
 			display: flex
 			align-items: center
 			> div
 				display: inline-block
-				margin-left: 1.75rem
-				font-weight: 300
+				margin-left: 2rem
+				font-weight: 500
 				color: white
 				font-size: .9rem
 				cursor: pointer
@@ -76,27 +79,35 @@ body
 				&:first-child
 					margin-left: 0rem
 				&:hover
-					color: $text-color
+					color: lighten($global-nav, 30%)
 main
 	width: 100%
 	position: relative
+	z-index: 1
 .section-wrap
 	text-align: center
+	margin: 4rem
 .section-post
 	// border: 2px solid lighten($text-color, 15%)
 	box-sizing: border-box
 	padding: 7px 21px
-	color: rgb(175, 175, 175)
+	color: rgb(120, 120, 120)
 	font-size: 1.5rem
-	font-weight: 300
-	margin: 3rem 0
+	font-weight: 100
 	width: auto
 	display: inline-block
 	position: relative
+	letter-spacing: 3px
 	span
 		font-size: 1.5rem
-		color: lighten($text-color, 22%)
-		border-bottom: 1px dashed $global-nav
+		color: lighten($def-color, 5%)
+		border: 1px dashed lighten($text-color, 25%)
+		background: #F5F7FA
+		box-sizing: border-box
+		margin-left: 4px
+		cursor: pointer
+		padding: 2px 8px
+		transition: 275ms
 .card-content-wrapper
 	display: flex
 	justify-content: center
@@ -109,33 +120,16 @@ main
 		margin: 0 .75rem
 		border: 1px solid rgb(235, 235, 235)
 		box-sizing: border-box
-		box-shadow: 1px 1px 8px 1px rgb(238, 238, 238)
+		box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.03)
 		position: relative
 		height: inherit
 		z-index: 99
 		background: white
 		border-radius: 6px
 		overflow: hidden
-		.card-info
-			padding: 2.5% 1.5%
-			margin: 0 3%
-			position: relative
-			display: flex
-			justify-content: space-between
-			align-items: center
-			box-sizing: border-box
-			border-bottom: 1px solid rgb(245, 245, 245)
-			.category
-				font-size: .65rem
-				font-weight: 500
-				color: rgb(196, 196, 196)
-			.date
-				font-size: 11px
-				font-weight: 500
-				color: rgb(160, 160, 160)
+		transition: 275ms
 		.title-head
 			padding: 4px 16px
-			// border-left: 1px solid lighten(dodgerblue, 10%)
 			box-sizing: border-box
 			margin: 18px 3%
 			text-align: left
@@ -143,16 +137,29 @@ main
 				font-size: 1.6rem
 				font-weight: 300
 				color: rgb(100, 100, 100)
+			.card-info
+				padding: 0 4%
+				margin-top: 14px
+				display: flex
+				justify-content: space-between
+				> div
+					display: inline-block
+					font-size: 10px
+					color: #AAB2BD
+				.category
+					color: #BAA286
 		.news-img
 			margin-left: 2%
 			width: 96%
 			height: 28rem
 			background: rgb(240, 240, 240)
 			box-sizing: border-box
+		.small
+			height: 20rem
 		.news-foot
 			width: 100%
 			background: white
-			padding: 22px 14px
+			padding: 18px 14px
 			box-sizing: border-box
 			position: relative
 			text-align: right

@@ -1,3 +1,9 @@
+@import url(http://db.onlinewebfonts.com/c/906d7add5c501d838f30bd793fba792d?family=Bethel);
+@font-face {
+  font-family: "Bethel";
+  src: url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.eot");
+  src: url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.woff2") format("woff2"), url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.woff") format("woff"), url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.svg#Bethel") format("svg");
+}
 * {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -11,11 +17,11 @@ body {
 
 .global-nav {
   width: 100%;
-  height: 3.75rem;
+  height: 3.5rem;
   position: relative;
   box-sizing: border-box;
   border-bottom: 1px solid #ebebeb;
-  background: #48CFAD;
+  background: #3C3B3D;
   z-index: 9;
 }
 .global-nav .gn-content-wrap {
@@ -32,7 +38,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 2rem;
+  padding: 0 3rem;
   height: 100%;
   position: relative;
 }
@@ -49,7 +55,7 @@ body {
 .global-nav .gn-content-wrap .logo-wrap {
   box-sizing: border-box;
   display: inline-block;
-  margin-right: 3.5rem;
+  margin-right: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -63,20 +69,16 @@ body {
   display: inline-block;
 }
 .global-nav .gn-content-wrap .logo-wrap .logo-text {
-  border-right: 1px solid #99e4d1;
-  padding-right: 0.75rem;
-  font-weight: 500;
-  color: white;
+  font-size: 1.9rem;
+  font-weight: 300;
+  font-family: "Bethel";
+  color: #54d98c;
 }
 .global-nav .gn-content-wrap .cat-drpdwn {
   color: white;
-  border: 1px solid #91e2ce;
-  background: #60d5b8;
-  box-sizing: border-box;
-  padding: 6px 18px;
-  font-weight: 300;
+  margin-left: 1rem;
+  font-weight: 500;
   font-size: 0.9rem;
-  margin-right: 2rem;
   cursor: pointer;
   -webkit-transition: 275ms;
           transition: 275ms;
@@ -84,7 +86,7 @@ body {
 }
 .global-nav .gn-content-wrap .cat-drpdwn:hover {
   background: none;
-  color: #a1e6d5;
+  color: #959397;
 }
 .global-nav .gn-content-wrap .information {
   display: -webkit-box;
@@ -98,8 +100,8 @@ body {
 }
 .global-nav .gn-content-wrap .information > div {
   display: inline-block;
-  margin-left: 1.75rem;
-  font-weight: 300;
+  margin-left: 2rem;
+  font-weight: 500;
   color: white;
   font-size: 0.9rem;
   cursor: pointer;
@@ -110,33 +112,42 @@ body {
   margin-left: 0rem;
 }
 .global-nav .gn-content-wrap .information > div:hover {
-  color: #37BC9B;
+  color: #89878a;
 }
 
 main {
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 
 .section-wrap {
   text-align: center;
+  margin: 4rem;
 }
 
 .section-post {
   box-sizing: border-box;
   padding: 7px 21px;
-  color: #afafaf;
+  color: #787878;
   font-size: 1.5rem;
-  font-weight: 300;
-  margin: 3rem 0;
+  font-weight: 100;
   width: auto;
   display: inline-block;
   position: relative;
+  letter-spacing: 3px;
 }
 .section-post span {
   font-size: 1.5rem;
-  color: #87dcc7;
-  border-bottom: 1px dashed #48CFAD;
+  color: #40d47e;
+  border: 1px dashed #81e3aa;
+  background: #F5F7FA;
+  box-sizing: border-box;
+  margin-left: 4px;
+  cursor: pointer;
+  padding: 2px 8px;
+  -webkit-transition: 275ms;
+          transition: 275ms;
 }
 
 .card-content-wrapper {
@@ -163,42 +174,15 @@ main {
   margin: 0 0.75rem;
   border: 1px solid #ebebeb;
   box-sizing: border-box;
-  box-shadow: 1px 1px 8px 1px #eeeeee;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.03);
   position: relative;
   height: inherit;
   z-index: 99;
   background: white;
   border-radius: 6px;
   overflow: hidden;
-}
-.card-content-wrapper .card-item .card-info {
-  padding: 2.5% 1.5%;
-  margin: 0 3%;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  box-sizing: border-box;
-  border-bottom: 1px solid whitesmoke;
-}
-.card-content-wrapper .card-item .card-info .category {
-  font-size: 0.65rem;
-  font-weight: 500;
-  color: #c4c4c4;
-}
-.card-content-wrapper .card-item .card-info .date {
-  font-size: 11px;
-  font-weight: 500;
-  color: #a0a0a0;
+  -webkit-transition: 275ms;
+          transition: 275ms;
 }
 .card-content-wrapper .card-item .title-head {
   padding: 4px 16px;
@@ -211,6 +195,26 @@ main {
   font-weight: 300;
   color: #646464;
 }
+.card-content-wrapper .card-item .title-head .card-info {
+  padding: 0 4%;
+  margin-top: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card-content-wrapper .card-item .title-head .card-info > div {
+  display: inline-block;
+  font-size: 10px;
+  color: #AAB2BD;
+}
+.card-content-wrapper .card-item .title-head .card-info .category {
+  color: #BAA286;
+}
 .card-content-wrapper .card-item .news-img {
   margin-left: 2%;
   width: 96%;
@@ -218,10 +222,13 @@ main {
   background: #f0f0f0;
   box-sizing: border-box;
 }
+.card-content-wrapper .card-item .small {
+  height: 20rem;
+}
 .card-content-wrapper .card-item .news-foot {
   width: 100%;
   background: white;
-  padding: 22px 14px;
+  padding: 18px 14px;
   box-sizing: border-box;
   position: relative;
   text-align: right;
