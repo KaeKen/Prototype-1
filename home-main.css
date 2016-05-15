@@ -1,3 +1,9 @@
+@import url(http://db.onlinewebfonts.com/c/906d7add5c501d838f30bd793fba792d?family=Bethel);
+@font-face {
+  font-family: "Bethel";
+  src: url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.eot");
+  src: url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.eot?#iefix") format("embedded-opentype"), url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.woff2") format("woff2"), url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.woff") format("woff"), url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.ttf") format("truetype"), url("http://db.onlinewebfonts.com/t/906d7add5c501d838f30bd793fba792d.svg#Bethel") format("svg");
+}
 * {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -11,11 +17,11 @@ body {
 
 .global-nav {
   width: 100%;
-  height: 3rem;
+  height: 3.5rem;
   position: relative;
   box-sizing: border-box;
   border-bottom: 1px solid #ebebeb;
-  background: #333333;
+  background: #3C3B3D;
   z-index: 9;
 }
 .global-nav .gn-content-wrap {
@@ -32,8 +38,8 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 3rem;
   height: 100%;
-  padding: 0 2rem;
   position: relative;
 }
 .global-nav .gn-content-wrap .gn-left-head {
@@ -47,27 +53,40 @@ body {
           align-items: center;
 }
 .global-nav .gn-content-wrap .logo-wrap {
-  padding-right: 0.75rem;
   box-sizing: border-box;
-  border-right: 1px solid #36a065;
   display: inline-block;
-  margin-right: 2rem;
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.global-nav .gn-content-wrap .logo-wrap > div {
+  display: inline-block;
 }
 .global-nav .gn-content-wrap .logo-wrap .logo-text {
-  font-weight: 600;
-  color: white;
+  font-size: 1.9rem;
+  font-weight: 300;
+  font-family: "Bethel";
+  color: #54d98c;
 }
 .global-nav .gn-content-wrap .cat-drpdwn {
-  display: inline-block;
   color: white;
+  margin-left: 1rem;
   font-weight: 500;
   font-size: 0.9rem;
   cursor: pointer;
   -webkit-transition: 275ms;
           transition: 275ms;
+  position: relative;
 }
 .global-nav .gn-content-wrap .cat-drpdwn:hover {
-  color: #5ac88b;
+  background: none;
+  color: #959397;
 }
 .global-nav .gn-content-wrap .information {
   display: -webkit-box;
@@ -81,8 +100,8 @@ body {
 }
 .global-nav .gn-content-wrap .information > div {
   display: inline-block;
-  margin-left: 1.75rem;
-  font-weight: 300;
+  margin-left: 2rem;
+  font-weight: 500;
   color: white;
   font-size: 0.9rem;
   cursor: pointer;
@@ -93,25 +112,42 @@ body {
   margin-left: 0rem;
 }
 .global-nav .gn-content-wrap .information > div:hover {
-  color: #c8c8c8;
+  color: #89878a;
 }
 
 main {
   width: 100%;
   position: relative;
+  z-index: 1;
+}
+
+.section-wrap {
+  text-align: center;
+  margin: 4rem;
 }
 
 .section-post {
-  border-left: 3px solid #94dbb3;
-  background: #f0f0f0;
-  padding: 6px 18px;
-  color: #3cb371;
+  box-sizing: border-box;
+  padding: 7px 21px;
+  color: #787878;
   font-size: 1.5rem;
   font-weight: 100;
-  margin: 2.75rem 2rem;
   width: auto;
   display: inline-block;
   position: relative;
+  letter-spacing: 3px;
+}
+.section-post span {
+  font-size: 1.5rem;
+  color: #40d47e;
+  border: 1px dashed #81e3aa;
+  background: #F5F7FA;
+  box-sizing: border-box;
+  margin-left: 4px;
+  cursor: pointer;
+  padding: 2px 8px;
+  -webkit-transition: 275ms;
+          transition: 275ms;
 }
 
 .card-content-wrapper {
@@ -123,10 +159,10 @@ main {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-flex-flow: row nowrap;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
@@ -136,44 +172,32 @@ main {
 .card-content-wrapper .card-item {
   width: 26rem;
   margin: 0 0.75rem;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #ebebeb;
   box-sizing: border-box;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.03);
   position: relative;
   height: inherit;
-}
-.card-content-wrapper .card-item .news-img {
-  width: 100%;
-  height: 28rem;
-  background: #f0f0f0;
-  box-sizing: border-box;
-}
-.card-content-wrapper .card-item .news-foot {
-  width: 100%;
+  z-index: 99;
   background: white;
-  padding: 22px 14px;
-  box-sizing: border-box;
-  position: relative;
-  text-align: right;
+  border-radius: 6px;
+  overflow: hidden;
+  -webkit-transition: 275ms;
+          transition: 275ms;
 }
-.card-content-wrapper .card-item .news-foot .title-head {
+.card-content-wrapper .card-item .title-head {
   padding: 4px 16px;
-  border-left: 1px solid #51a9ff;
   box-sizing: border-box;
-}
-.card-content-wrapper .card-item .news-foot .title-head .category {
+  margin: 18px 3%;
   text-align: left;
-  font-size: 0.65rem;
-  font-weight: 500;
-  color: #51a9ff;
-  margin-bottom: 4px;
 }
-.card-content-wrapper .card-item .news-foot .title-head .title {
-  text-align: left;
-  font-size: 1.4rem;
+.card-content-wrapper .card-item .title-head .title {
+  font-size: 1.6rem;
   font-weight: 300;
   color: #646464;
 }
-.card-content-wrapper .card-item .news-foot .news-info {
+.card-content-wrapper .card-item .title-head .card-info {
+  padding: 0 4%;
+  margin-top: 14px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -182,18 +206,55 @@ main {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 16px;
-  padding: 10px 0;
-  box-sizing: border-box;
-  border-bottom: 1px solid #e6e6e6;
 }
-.card-content-wrapper .card-item .news-foot .news-info .info-item {
+.card-content-wrapper .card-item .title-head .card-info > div {
+  display: inline-block;
+  font-size: 10px;
+  color: #AAB2BD;
+}
+.card-content-wrapper .card-item .title-head .card-info .category {
+  color: #BAA286;
+}
+.card-content-wrapper .card-item .news-img {
+  margin-left: 2%;
+  width: 96%;
+  height: 28rem;
+  background: #f0f0f0;
+  box-sizing: border-box;
+}
+.card-content-wrapper .card-item .small {
+  height: 20rem;
+}
+.card-content-wrapper .card-item .news-foot {
+  width: 100%;
+  background: white;
+  padding: 18px 14px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: right;
+}
+.card-content-wrapper .card-item .news-foot .news-publish-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 32px;
+  box-sizing: padding-box;
+}
+.card-content-wrapper .card-item .news-foot .news-publish-info .info-item {
   font-size: 0.8rem;
   color: #bebebe;
+  font-weight: 300;
+}
+.card-content-wrapper .card-item .news-foot .news-publish-info .info-item i {
+  font-size: 0.8rem;
 }
 .card-content-wrapper .card-item .news-foot .desc-container {
   width: 100%;
-  margin-top: 6px;
   padding: 6px 24px;
   box-sizing: border-box;
   text-align: justify;
